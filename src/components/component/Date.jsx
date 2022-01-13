@@ -6,10 +6,19 @@ export default function Date() {
 
   return (
     <div>
-      <input type="date" value={current} onChange={save}></input>
+      <input
+        aria-label="input"
+        type="date"
+        value={current}
+        onChange={save}
+      ></input>
       <div> {current ? current : "Please enter a date above"}</div>
-      <button onClick={redo}>Redo</button>
-      <button onClick={undo}>Undo</button>
+      <button aria-label="button-1" onClick={redo}>
+        Redo
+      </button>
+      <button aria-label="button-2" onClick={undo}>
+        Undo
+      </button>
     </div>
   );
 }
